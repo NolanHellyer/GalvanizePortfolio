@@ -4,11 +4,11 @@ This repository has been setup so that I can apply to Galvanize!
 
 ## Standard One
 
-I chose to create a project using HTML, CSS, and JavaScript/jQuery. I couldn’t help folding all of the other standards into it and creating a website that presents them all. Luckily, I already had a domain and had already setup a web server to host it. The code has all been uploaded here, but you can view the deployed website at galvanize.nolanhellyer.com.
+I chose to create a project using HTML, CSS, and JavaScript/jQuery. I couldn’t help folding all of the other standards into it and creating a website that presents them all. Luckily, I already had a domain and had already setup a web server to host it. The code has all been uploaded here, but you can view the deployed website at [galvanize.nolanhellyer.com](galvanize.nolanhellyer.com).
 
 ## Standard Two
 
-I chose to solve a Project Euler problem. My code has been uploaded and contains comments. The problem was number 19, Counting Sundays.
+I chose to solve a Project Euler problem. My code has been uploaded and contains comments. The problem was number 19, [Counting Sundays](https://projecteuler.net/problem=19).
 
 > You are given the following information, but you may prefer to do some research for yourself.
 
@@ -27,15 +27,15 @@ My solution was written in Python. It is the file `sundays.py`.
 
 ### A quick break down of how I solved it
 
-It tells me what Jan 1 1900 is, but wants the actual century starting in 1901. Although it allows me to do some research on my own, I decided that my code would roll with the weird start date.
+It tells me what Jan 1 1900 is, but wants the actual century starting in 1901. Although it allows me to do some research on my own, I decided that my code would roll with the weird start date. Also, I am aware that Python (like many other languages) has a date object that would be very helpful in solving this. It felt like cheating, though, so I went without.
 
-The first thing I did was devise a little scheme in my mind for how I might get python to do all the work for me. The first thing that came to mind was something involving lots of nested loops, but I try to avoid those if possible. 
+The first thing I did was devise a plan in my mind for how I could solve the problem. The first thing that came to mind was something involving lots of nested loops, but I try to avoid those if possible. 
 
-So instead I figured out a little way that a program might figure out how many days between Sunday (as the first day of the week) and Saturday had to roll over to the next month without excessive looping. If you lop off whatever days rolled over into the month you are looking at, find the modulo of the remaining days and seven, then subtract that number from seven you know how many days rolled over. If no days rolled over, then you have hit a Sunday on the first of the month and you should increment some kind of counter.
+So instead I figured out a little way that a program might figure out how many days between Sunday (as the first day of the week) and Saturday had to roll over to the next month without excessive looping. If you chop off whatever days rolled over into the month you are looking at (essentially, the days until the first Sunday of the month), find the modulo of the remaining days and seven, then subtract that number from seven, you know how many days roll over. If no days rolled over, then you have hit a Sunday on the first of the month and you should increment some kind of counter.
 
 Although I do have one nested loop going on, I forgave myself because it was a natural way of looking at each month over a century, given that months are looping from year to year.
 
-Next, I figured out all the variables I would need to accomplish this. I like naming everything so that it’s clear in my code what each number is for.
+The next step was to figure out all the variables I would need to accomplish this. I like naming everything so that it’s clear in my code what each number is for, which is why there are a lot of variables.
 
 `year = [ 31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31 ]` List, in order, of how many days each month has.\
 `leap = 29` Leap year February has 29 days.\
@@ -49,7 +49,7 @@ Next, I figured out all the variables I would need to accomplish this. I like na
 
 Then, I wrote out the code based on the idea I had had originally. 
 
-And finally, I spent the last %80 of my time chasing down all the little bugs and problems that I had created. 
+And finally, I spent the last 80 percent of my time chasing down all the little bugs and problems that I had created.
 
 The magic lines of code are `remainder = week - ((month - remainder) % week)` and `remainder = week - ((leap - remainder) % week)`. Those lines of code represent the idea I first had about how to solve the problem without nested loops.
 
@@ -107,3 +107,15 @@ We are done, print that sum!
 ```python
 print(sundays)
 ```
+
+## Standard Three
+
+I chose to submit a previously created project that I completed purely for fun. I bought a program called Affinity Designer for work, it’s a robust alternative to Adobe Illustrator. I bought it because I was doing work on our website and needed it, but I have since found that using it is a lot of fun.
+
+My graphic design skills are a bit simplistic and it is not my normal creative outlet, but I often find myself engrossed in projects like this after work.
+
+One evening I was taking out the trash, and decided to exit my apartment building from the alley. To my horror, the alley had been overrun by a sea of rats. The whole alley seemed to be moving and shifting as the rats scurried under piles of garbage to hide from me. 
+
+The rats had completely disgusted me, so naturally I had to create some kind of tribute to them. It was only supposed to be a quick little representation of the very silly parody of the preamble of the US Constitution, but I found myself glued to this poster project for quite a long time. I could not help but decorate it with the cheesy and over-the-top stars and stripes iconography that is commonly found on campaign signs.
+
+I don’t want to admit how much time I spent on this, but it was certainly more than two hours (drawing even simplistic blue rats is a challenge for me!) I have uploaded both a PNG and the original Affinity Designer file.

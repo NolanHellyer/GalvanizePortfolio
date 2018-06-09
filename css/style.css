@@ -320,16 +320,12 @@ nav {
 
 #footer-content {
     max-width: 60em;
-    margin:auto;
-}
-
-#footer-content ul{
     display: inline-block;
-    list-style: none;
-    margin:auto;
 }
 
-#footer-content ul li{
-    display:inline-block;
-    padding: 1em;
+#footer-content span {
+    color:white;
+    font:1.2em "Lato";
+    width: 100%;
+    text-align: center;
 }

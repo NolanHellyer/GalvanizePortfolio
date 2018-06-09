@@ -1,5 +1,4 @@
 $(document).ready(function () {
-    $("#debug").html($(window).width());
     $(window).scroll(function () {
         var scroll = $(document).scrollTop();
 

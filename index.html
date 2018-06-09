@@ -1,0 +1,237 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Galvanize Portfolio</title>
+    <link href="css/style.css" type="text/css" rel="stylesheet">
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+    <script src="js/accordian-slider.js"></script>
+    <script src="js/h-slide.js"></script>
+    <script>
+        hljs.initHighlightingOnLoad();
+    </script>
+</head>
+
+<body>
+    <div id="debug">
+    </div>
+    <div class="accordian-slider">
+        <div class="as-img as-1">
+            <img src="img/code.jpg" />
+            <h3 class="as-title">Standard One: <br/> Website Built!</h3>
+        </div>
+        <div class="as-img as-2">
+            <img src="img/calendar.jpg" />
+            <h3 class="as-title">Standard Two:<br/> Sundays Counted!</h3>
+        </div>
+        <div class="as-img as-3">
+            <img src="img/alley.jpg" />
+            <h3 class="as-title">Standard Three:<br/> Alleyway Constitution Created!</h3>
+        </div>
+    </div>
+    <nav>
+        <a href="#introduction">Introduction</a>
+        <a href="#standard-one">Standard One</a>
+        <a href="#standard-two">Standard Two</a>
+        <a href="#standard-three">Standard Three</a>
+    </nav>
+    <div class="container">
+        <div id="introduction">
+            <h1>Galvanize Portfolio</h1>
+            <p>Welcome to the website version of my Galvanize Portfolio. This website was built with the help of JS-Highlighter and jQuery. The rest of the JavaScript, HMTL and CSS is my own.</p>
+        </div>
+
+        <div id="standard-one" class="section">
+
+            <h2>Standard One</h2>
+
+            <div class="section-content">
+                <p>I chose to create a project using HTML, CSS, and JavaScript/jQuery. I couldn’t help folding all of the other standards into it and creating a website that presents them all. Luckily, I already had a domain and had already setup a web server to host it. The code has all been uploaded here, but you can view the deployed website at <a href="galvanize.nolanhellyer.com">galvanize.nolanhellyer.com</a>.</p>
+
+                <p>I used this project as an opportunity to use CSS Grid. Although I did learn some Grid, I did not use it as heavily on this site as I thought I would.</p>
+
+                <span class="note"><p>I admit that the note boxes only serve to add color, and aren’t useful. They were intended as a use CSS Grid, but that was foiled when I realized I have to float them. Still, I couldn’t resist.</p></span>
+
+                <p>I also created a jQuery slider. It’s a little funny in that is slides back to the first slide. I kind of liked the idea when I created it, and it’s a little easier than making it slide one way forever. If I was going to make it slide in one direction forever, I would copy the first slide to the end and then add a function that quickly switches the current slide to the first slide when the end of the slider was reached.</p>
+
+                <p>I could also add back and forward buttons that would call the <code>slide_elements</code> function—as well as a reverse function—when pressed. Like, it seems, all projects I embark on, there are an endless number of ways I could improve and enhance, but if I had more time to devote to this those buttons would be at the top of the list, along with using CSS to collapse the menu when the screen is narrow (or is a mobile device).</p>
+
+                <p>Finally, while I’m sure I’m not the first person to think of section headers that slide down with the viewport, I’m pretty proud of those.</p>
+            </div>
+
+        </div>
+
+        <div class="testimonial">
+            <div class="tm-image">
+                <img src="img/doc-brown.jpg">
+            </div>
+            <h3 class="tm-quote">&ldquo;Great Scott!&rdquo;</h3>
+            <span class="tm-source">Doctor Emmett Brown</span>
+            <span class="tm-subject">On the timesaving potential of CSS Grid </span>
+        </div>
+
+        <div id="standard-two" class="section">
+
+            <h2>Standard Two</h2>
+
+            <div class="section-content">
+                <p>I chose to solve a Project Euler problem. My code has been uploaded and contains comments. The problem was number 19, <a href="https://projecteuler.net/problem=19">Counting Sundays</a>.</p>
+
+                <blockquote>
+                    <p>You are given the following information, but you may prefer to do some research for yourself.</p>
+
+                    <ul>
+                        <li>1 Jan 1900 was a Monday.</li>
+                        <li>Thirty days has September,<br/> April, June and November.<br/> All the rest have thirty-one,<br/> Saving February alone,<br/> Which has twenty-eight, rain or shine.<br/> And on leap years, twenty-nine.</li>
+                        <li>A leap year occurs on any year evenly divisible by 4, but not on a century unless it is divisible by 400.</li>
+                    </ul>
+
+                    <p>How many Sundays fell on the first of the month during the twentieth century (1 Jan 1901 to 31 Dec 2000)?</p>
+                </blockquote>
+
+                <p>My solution was written in Python. It is the file <code>sundays.py</code>.</p>
+
+                <h3>A quick break down of how I solved it</h3>
+
+                <p>It tells me what Jan 1 1900 is, but wants the actual century starting in 1901. Although it allows me to do some research on my own, I decided that my code would roll with the weird start date. Also, I am aware that Python (like many other languages) has a date object that would be very helpful in solving this. It felt like cheating, though, so I went without.</p>
+
+                <p>The first thing I did was devise a plan in my mind for how I could solve the problem. The first thing that came to mind was something involving lots of nested loops, but I try to avoid those if possible. </p>
+
+                <p>So instead I figured out a little way that a program might figure out how many days between Sunday (as the first day of the week) and Saturday had to roll over to the next month without excessive looping. If you chop off whatever days rolled over into the month you are looking at (essentially, the days until the first Sunday of the month), find the modulo of the remaining days and seven, then subtract that number from seven, you know how many days roll over. If no days rolled over, then you have hit a Sunday on the first of the month and you should increment some kind of counter.</p>
+
+
+
+                <span class="note"><p>Although I do have one nested loop going on, I forgave myself because it was a natural way of looking at each month over a century, given that months are looping from year to year.</p></span>
+
+                <p>The next step was to figure out all the variables I would need to accomplish this. I like naming everything so that it’s clear in my code what each number is for, which is why there are a lot of variables.</p>
+
+                <p><code>year = [ 31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31 ]</code> List, in order, of how many days each month has.<br/>
+                    <code>leap = 29</code> Leap year February has 29 days.<br/>
+                    <code>week = 7</code> Number of days in the week.<br/>
+                    <code>starting_year = 1900</code> This is the first year we have information about.<br/>
+                    <code>start_counting = 1901</code> This is the first year we actually care about.<br/>
+                    <code>ending_year = 2000</code> This is the last year we care about.<br/>
+                    <code>current_year = starting_year</code> This will be the year that we increment as we go.<br/>
+                    <code>remainder = 6</code> In Jan of 1900 we know there are 6 days before the first Sunday.<br/>
+                    <code>sundays = 0</code> This will store a sum of first Sundays as we hit them.</p>
+
+                <p>Then, I wrote out the code based on the idea I had had originally. </p>
+
+                <p>And finally, I spent the last 80 percent of my time chasing down all the little bugs and problems that I had created.</p>
+
+                <p>The magic lines of code are <code>remainder = week - ((month - remainder) % week)</code> and <code>remainder = week - ((leap - remainder) % week)</code>. Those lines of code represent the idea I first had about how to solve the problem without nested loops.</p>
+
+                <p>The loops:</p>
+
+                <div class='code-wrapper'>
+                    <pre><code class="python">while(current_year &lt;= ending_year):
+    for month in year:
+</code></pre>
+                </div>
+
+                <p>We should think of 7 days before Sunday as 0 days instead.</p>
+
+                <div class='code-wrapper'>
+                    <pre><code class="python">        if (remainder == week):
+            remainder = 0
+</code></pre>
+                </div>
+
+                <p>In the case where we have 0 days before Sunday, add to our counter!</p>
+
+                <div class='code-wrapper'>
+                    <pre><code class="python">        if(current_year &gt;= start_counting and remainder == 0):
+            sundays = sundays + 1
+</code></pre>
+                </div>
+
+                <p>In the case where:</p>
+
+                <ul>
+                    <li>We ARE in February,</li>
+                    <li>AND the year IS divisible by four,</li>
+                    <li>AND it IS EITHER NOT a century OR IS a century that IS divisible by 400</li>
+                </ul>
+
+                <p>then it's a leap year and should be 29 days, not 28!</p>
+
+                <div class='code-wrapper'>
+                    <pre><code class="python">        if(month == 28
+        and current_year % 4 == 0
+        and (current_year % 100 != 0 or current_year % 400 == 0)):
+            remainder = week - ((leap - remainder) % week)
+</code></pre>
+                </div>
+
+                <p>Otherwise it's just a boring, normal month.</p>
+
+                <div class='code-wrapper'>
+                    <pre><code class="python">        else:
+            remainder = week - ((month - remainder) % week)
+</code></pre>
+                </div>
+
+                <p>We checked each month of this year, time to increment!</p>
+
+                <div class='code-wrapper'>
+                    <pre><code class="python">    current_year = current_year + 1
+</code></pre>
+                </div>
+
+                <p>We are done, print that sum!</p>
+
+                <div class='code-wrapper'>
+                    <pre><code class="python">print(sundays)
+</code></pre>
+                </div>
+            </div>
+        </div>
+        <div class="testimonial">
+            <div class="tm-image">
+            <img src="img/Darth-Vader.jpg" />
+            </div>
+            <h3 class="tm-quote">&ldquo;Most Impressive.&rdquo;</h3>
+            <span class="tm-source">Lord Vader</span>
+            <span class="tm-subject">On the awesome power of Python</span>
+        </div>
+        <div id="standard-three" class="section">
+            <h2>Standard Three</h2>
+
+            <div class="section-content">
+                <p>I chose to submit a previously created project that I completed purely for fun. I bought a program called Affinity Designer for work, it’s a robust alternative to Adobe Illustrator. I bought it because I was doing work on our website and needed it, but I have since found that using it is a lot of fun.</p>
+
+                <span class="note"><p>My graphic design skills are a bit simplistic and it is not my normal creative outlet, but I often find myself engrossed in projects like this after work.</p></span>
+
+                <p>One evening I was taking out the trash, and decided to exit my apartment building from the alley. To my horror, the alley had been overrun by a sea of rats. The whole alley seemed to be moving and shifting as the rats scurried under piles of garbage to hide from me. </p>
+
+                <p>The rats had completely disgusted me, so naturally I had to create some kind of tribute to them. It was only supposed to be a quick little representation of the very silly parody of the preamble of the US Constitution, but I found myself glued to this poster project for quite a long time. I could not help but decorate it with the cheesy and over-the-top stars and stripes iconography that is commonly found on campaign signs.</p>
+
+                <p>I don’t want to admit how much time I spent on this, but it was certainly more than two hours (drawing even simplistic blue rats is a challenge for me!) I have uploaded both a PNG and the original Affinity Designer file.</p>
+                
+                <a class="img-a" href="img/AlleyratConstitution.png" target="_blank"><img src="img/AlleyratConstitution.png" height="300px"></a>
+            </div>
+        </div>
+        <div class="testimonial">
+            <div class="tm-image">
+                <img src="img/liz-lemon.jpg" />
+            </div>
+            <h3 class="tm-quote">&ldquo;Shut it down.&rdquo;</h3>
+            <span class="tm-source">Liz Lemon</span>
+            <span class="tm-subject">On the writhing sea of rats in the alley</span>
+        </div>
+    </div>
+    <div id="footer">
+        <div id="footer-content">
+            <ul>
+                <li>Nolan Hellyer</li>
+                <li><a href="mailto:nolan.hellyer@gmail.com">nolan.hellyer@gmail.com</a></li>
+                <li>June 2018</li>
+            </ul>
+        </div>
+    </div>
+</body>
+
+</html>

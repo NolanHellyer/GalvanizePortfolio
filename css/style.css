@@ -1,0 +1,339 @@
+/*
+COLOR PALETTE
+Dark: #232A30
+Light: #515B5B
+Red: #D03B2A
+*/
+
+#debug {
+    position: fixed;
+    color: white;
+}
+
+/*
+    BASE STYLES
+*/
+
+p,
+ul,
+ol,
+a {
+    font-family: "Lato";
+    font-size: 1.1rem;
+    line-height: 1.8rem;
+    color:white;
+}
+
+a {
+    color: white;
+    text-decoration: none;
+    font-family: "Lato-thin"
+}
+
+a:hover {
+    background: #232A30;
+}
+
+h1,
+h2,
+h3,
+h4 {
+    font-family: "Lato-Black";
+}
+
+blockquote {
+    padding-left:2em;
+    border-left:.3em white solid;
+}
+
+/*
+    LAYOUT
+*/
+
+html,
+body {
+    margin: 0em;
+}
+
+body {
+    background: #232A30;
+}
+
+.container {
+    max-width: 800px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: auto;
+    grid-row-gap: 1em;
+    color: white;
+}
+
+#introduction {
+    grid-column: 1/5;
+}
+
+.section {
+    width: 100%;
+    grid-column: 1/5;
+    display: grid;
+    grid-template-columns: 15em 1fr;
+    grid-column-gap: 1.5em;
+}
+
+.section h2,
+.section h1 {
+    grid-column: 1/2;
+    text-align: left;
+    margin: 1em;
+}
+
+.section-content {
+    background: #344040;
+    padding: 1em;
+    border-radius: .5em;
+    grid-column: 2/5;
+}
+
+.img-a {
+    margin:auto;
+}
+
+@media (max-width: 50em) {
+    .section-content {
+        grid-column: 1/5
+    }
+}
+
+/*
+    SLIDING HEADERS
+*/
+
+@media (min-width: 50em) {
+    .sticky {
+        position: fixed;
+        top: 0;
+    }
+
+    .stuck {
+        align-self: end;
+    }
+}
+
+/*
+    NOTE BOX
+*/
+
+.note {
+    display: block;
+    width: 20em;
+    float: right;
+    margin: .5em -5em .5em 2em;
+    background: #232A30;
+    padding: .7em;
+    border: 5px #D03B2A solid;
+    border-radius: .5em;
+}
+
+.note::before {
+    content: "Note:";
+    font-family: "Lato-black";
+    background: #D03B2A;
+    display: block;
+    padding: inherit;
+    margin: -.7em -.7em 0em -.7em;
+}
+
+@media(max-width:950px) {
+    .note {
+        display:block;
+        float:none;
+        margin: 0;
+        width: inherit;
+    }
+}
+
+@media(max-width:800px) {
+    .note {
+        display:block;
+        float:none;
+        margin: 0;
+        width: inherit;
+    }
+}
+
+/*
+    TESTIMONIAL
+*/
+
+.testimonial {
+    grid-column-start: 2;
+    grid-column-end: 5;
+    display:grid;
+    grid-template-columns: 6em 1fr;
+    grid-template-rows: auto;
+    grid-column-gap: 2em;
+    grid-row-gap: 0em;
+    margin:0;
+}
+
+.tm-image {
+    overflow: hidden;
+    height: 6em;
+    width: 6em;
+    border-radius: 10em;
+    grid-row: 1 / 4;
+    grid-column-start: 1;
+}
+
+.tm-image img {
+    height:100%
+}
+
+.tm-quote{
+    font-size:2em;
+    grid-row: 1;
+    grid-column: 2;
+    margin: 0;
+}
+
+.tm-source {
+    font: 1em "Lato", sans;
+    grid-row: 2;
+    grid-column: 2;
+    text-transform: uppercase;
+}
+
+.tm-subject {
+    font: 1em "Lato", sans;
+    grid-row: 3;
+    grid-column: 2;
+}
+
+@media(max-width:800px) {
+    .testimonial {
+        grid-column: 1 / 5;
+        padding: 1em;
+    }
+}
+
+/*
+    Code Block Adjustment
+*/
+
+.code-wrapper {
+    overflow: hidden;
+}
+
+code {
+    font-size:1.1em;
+    background:#F0F0F0;
+    color:#444;
+    padding: 0em .4em 0em .4em;
+}
+
+/*
+    Accordian Slider
+ */
+
+.accordian-slider img {
+    width: 100vw;
+}
+
+.accordian-slider {
+    overflow: hidden;
+    width: 100%;
+    display: flex;
+    flex-wrap: nowrap;
+    max-height: 15em;
+}
+
+/*
+.accordian-slider:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+*/
+
+.as-img {
+    width: 0%;
+}
+
+.as-current {
+    width: 100%;
+    overflow: hidden;
+}
+
+.as-title {
+    position: absolute;
+    top: 2em;
+    left: 3em;
+    color: white;
+    background: rgba(35, 42, 48, .5);
+    padding: .7em;
+    opacity: 0;
+    max-width: 25em;
+}
+
+@media (max-width: 50em) {
+    .as-title {
+        top: 0em;
+    }
+}
+
+/*
+    Nav Bar
+*/
+
+nav a {
+    list-style-type: none;
+    display: inline-block;
+    color: white;
+    font-family: "Lato";
+    padding: 1.5em 1em;
+}
+
+nav {
+    background: #232A30;
+    position: relative;
+    width: 100vw;
+    text-align: right;
+    color: white;
+    background: black;
+    margin-top: -10px
+}
+
+@media (max-width: 40em) {
+    nav a {
+        display: block;
+        text-align: left;
+        margin: .6em 0em .6em 0em;
+    }
+}
+
+/*
+    FOOTER
+*/
+
+#footer {
+    background: black;
+    padding: 2em 0 6em 0;
+    margin-top: 1em;
+}
+
+#footer-content {
+    max-width: 60em;
+    margin:auto;
+}
+
+#footer-content ul{
+    display: inline-block;
+    list-style: none;
+    margin:auto;
+}
+
+#footer-content ul li{
+    display:inline-block;
+    padding: 1em;
+}

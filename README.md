@@ -6,6 +6,16 @@ This repository has been setup so that I can apply to Galvanize!
 
 I chose to create a project using HTML, CSS, and JavaScript/jQuery. I couldn’t help folding all of the other standards into it and creating a website that presents them all. Luckily, I already had a domain and had already setup a web server to host it. The code has all been uploaded here, but you can view the deployed website at [galvanize.nolanhellyer.com](galvanize.nolanhellyer.com).
 
+I used this project as an opportunity to use CSS Grid. Although I did learn some Grid, I did not use it as heavily on this site as I thought I would.
+
+I admit that the note boxes serve to add color, and aren’t useful. They were intended as a use CSS Grid, but that was foiled when I realized I have to float them. Still, I couldn’t resist.
+
+I also created a jQuery slider. It’s a little funny in that is slides back to the first slide. I kind of liked the idea when I created it, and it’s a little easier than making it slide one way forever. If I was going to make it slide in one direction forever, I would copy the first slide to the end and then add a function that quickly switches the current slide to the first slide when the end of the slider was reached.
+
+I could also add back and forward buttons that would call the ```slide_elements``` function—as well as a reverse function—when pressed. Like, it seems, all projects I embark on, there are an endless number of ways I could improve and enhance, but if I had more time to devote to this those buttons would be at the top of the list, along with using CSS to collapse the menu when the screen is narrow (or is a mobile device).
+
+Finally, while I’m sure I’m not the first person to think of section headers that slide down with the viewport, I’m pretty proud of those.
+
 ## Standard Two
 
 I chose to solve a Project Euler problem. My code has been uploaded and contains comments. The problem was number 19, [Counting Sundays](https://projecteuler.net/problem=19).

@@ -73,7 +73,7 @@ body {
     width: 100%;
     grid-column: 1/5;
     display: grid;
-    grid-template-columns: 15em 1fr;
+    grid-template-columns: 14em 1fr;
     grid-column-gap: 1.5em;
 }
 
@@ -319,8 +319,9 @@ nav {
 }
 
 #footer-content {
-    max-width: 60em;
+    width: 100%;
     display: inline-block;
+    text-align: center;
 }
 
 #footer-content span {

@@ -9,6 +9,8 @@ Red: #D03B2A
     BASE STYLES
 */
 
+@import url('https://fonts.googleapis.com/css?family=Lato:400,900');
+
 p,
 ul,
 ol,
@@ -22,7 +24,6 @@ a {
 a {
     color: white;
     text-decoration: none;
-    font-family: "Lato", sans-serif;
     background: #232A30;
 }
 
@@ -94,9 +95,11 @@ body {
 }
 
 .img-a {
-    box-shadow: black 2px 2px 2px;
     display: inline-block;
-    margin: auto;
+}
+
+.img-a img {
+    display: block;
 }
 
 @media (max-width: 50em) {

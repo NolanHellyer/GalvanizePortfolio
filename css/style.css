@@ -13,7 +13,7 @@ p,
 ul,
 ol,
 a {
-    font-family: "Lato";
+    font-family: "Lato", sans-serif;
     font-size: 1.1rem;
     line-height: 1.8rem;
     color:white;
@@ -22,18 +22,20 @@ a {
 a {
     color: white;
     text-decoration: none;
-    font-family: "Lato-thin"
+    font-family: "Lato", sans-serif;
+    background: #232A30;
 }
 
 a:hover {
-    background: #232A30;
+    background: inherit;
 }
 
 h1,
 h2,
 h3,
 h4 {
-    font-family: "Lato-Black";
+    font-family: "Lato", sans-serif;
+    font-weight: 900;
 }
 
 blockquote {
@@ -92,7 +94,9 @@ body {
 }
 
 .img-a {
-    margin:auto;
+    box-shadow: black 2px 2px 2px;
+    display: inline-block;
+    margin: auto;
 }
 
 @media (max-width: 50em) {
@@ -133,7 +137,8 @@ body {
 
 .note::before {
     content: "Note:";
-    font-family: "Lato-black";
+    font-family: "Lato", sans-serif;
+    font-weight: 900;
     background: #D03B2A;
     display: block;
     padding: inherit;
@@ -194,14 +199,14 @@ body {
 }
 
 .tm-source {
-    font: 1em "Lato", sans;
+    font: 1em "Lato", sans-serif;
     grid-row: 2;
     grid-column: 2;
     text-transform: uppercase;
 }
 
 .tm-subject {
-    font: 1em "Lato", sans;
+    font: 1em "Lato", sans-serif;
     grid-row: 3;
     grid-column: 2;
 }
@@ -286,8 +291,13 @@ nav a {
     list-style-type: none;
     display: inline-block;
     color: white;
-    font-family: "Lato";
+    font-family: "Lato", sans-serif;
     padding: 1.5em 1em;
+    background: inherit;
+}
+
+nav a:hover {
+    background: #232A30;
 }
 
 nav {
@@ -326,7 +336,7 @@ nav {
 
 #footer-content span {
     color:white;
-    font:1.2em "Lato";
+    font:1.2em "Lato", sans-serif;
     width: 100%;
     text-align: center;
 }

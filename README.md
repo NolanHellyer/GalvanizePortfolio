@@ -4,7 +4,7 @@ This repository has been setup so that I can apply to Galvanize!
 
 ## Standard One
 
-I chose to create a project using HTML, CSS, and JavaScript/jQuery. I couldn’t help folding all of the other standards into it and creating a website that presents them all. Luckily, I already had a domain and had already setup a web server to host it. The code has all been uploaded here, but you can view the deployed website at [galvanize.nolanhellyer.com](galvanize.nolanhellyer.com).
+I chose to create a project using HTML, CSS, and JavaScript/jQuery. I couldn’t help folding all of the other standards into it and creating a website that presents them all. Luckily, I already had a domain and had already setup a web server to host it. The code has all been uploaded here, but you can view the deployed website at [nolanhellyer.com/GalvanizePortfolio](http://nolanhellyer.com/GalvanizePortfolio).
 
 I used this project as an opportunity to use CSS Grid. Although I did learn some Grid, I did not use it as heavily on this site as I thought I would.
 

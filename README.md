@@ -4,17 +4,15 @@ This repository has been setup so that I can apply to Galvanize!
 
 ## Standard One
 
-I chose to create a project using HTML, CSS, and JavaScript/jQuery. I couldn’t help folding all of the other standards into it and creating a website that presents them all. Luckily, I already had a domain and had already setup a web server to host it. The code has all been uploaded here, but you can view the deployed website at [nolanhellyer.com/GalvanizePortfolio](http://nolanhellyer.com/GalvanizePortfolio).
+I chose to create a project using HTML, CSS, and JavaScript/jQuery, folding all of the other standards into it and creating a website that presents them all. I already had a domain and had setup a web server to host it. The code has all been uploaded here, but you can view the deployed website at [nolanhellyer.com/GalvanizePortfolio](http://nolanhellyer.com/GalvanizePortfolio).
 
-I used this project as an opportunity to use CSS Grid. Although I did learn some Grid, I did not use it as heavily on this site as I thought I would.
+I used this project as an opportunity to use CSS Grid, and was able to use some of it on this site.
 
-I admit that the note boxes serve to add color, and aren’t useful. They were intended as a use CSS Grid, but that was foiled when I realized I have to float them. Still, I couldn’t resist.
+The note boxes serve to add color but don’t have any actual utility. They were intended as a use CSS Grid, but that was foiled when I realized I have to float them.
 
-I also created a jQuery slider. It’s a little funny in that is slides back to the first slide. I kind of liked the idea when I created it, and it’s a little easier than making it slide one way forever. If I was going to make it slide in one direction forever, I would copy the first slide to the end and then add a function that quickly switches the current slide to the first slide when the end of the slider was reached.
+I also created a jQuery slider. It’s a little unusual in that is slides back to the first slide. I kind of liked the idea when I created it, and it’s a little easier than making it slide one way forever. If I were going to make it slide in one direction forever, I would copy the first slide to the end and then add a function that quickly switches the current slide to the first slide when the end of the slider was reached.
 
-I could also add back and forward buttons that would call the ```slide_elements``` function—as well as a reverse function—when pressed. Like, it seems, all projects I embark on, there are an endless number of ways I could improve and enhance, but if I had more time to devote to this those buttons would be at the top of the list, along with using CSS to collapse the menu when the screen is narrow (or is a mobile device).
-
-Finally, while I’m sure I’m not the first person to think of section headers that slide down with the viewport, I’m pretty proud of those.
+While I’m sure I’m not the first person to think of section headers that slide down with the viewport, I’m pretty proud of those.
 
 ## Standard Two
 
@@ -37,11 +35,11 @@ My solution was written in Python. It is the file `sundays.py`.
 
 ### A quick break down of how I solved it
 
-It tells me what Jan 1 1900 is, but wants the actual century starting in 1901. Although it allows me to do some research on my own, I decided that my code would roll with the weird start date. Also, I am aware that Python (like many other languages) has a date object that would be very helpful in solving this. It felt like cheating, though, so I went without.
+Project Euler tells me what Jan 1 1900 is, but wants the actual century starting in 1901. Although it allows me to do some research on my own, I decided that my code would roll with the weird start date. Also, I am aware that Python has a date object that would be very helpful in solving this. It felt like cheating, though, so I went without.
 
-The first thing I did was devise a plan in my mind for how I could solve the problem. The first thing that came to mind was something involving lots of nested loops, but I try to avoid those if possible. 
+The first thing I did was to devise a plan in my mind for how I could solve the problem. The first idea that came to my mind was something involving lots of nested loops, but I try to avoid those if possible. 
 
-So instead I figured out a little way that a program might figure out how many days between Sunday (as the first day of the week) and Saturday had to roll over to the next month without excessive looping. If you chop off whatever days rolled over into the month you are looking at (essentially, the days until the first Sunday of the month), find the modulo of the remaining days and seven, then subtract that number from seven, you know how many days roll over. If no days rolled over, then you have hit a Sunday on the first of the month and you should increment some kind of counter.
+So instead I figured out a way that a program might figure out how many days between Sunday (as the first day of the week) and Saturday had to roll over to the next month without excessive looping. If you chop off whatever days rolled over into the month you are looking at (essentially, the days until the first Sunday of the month), find the modulo of the remaining days and seven, then subtract that number from seven, you know how many days roll over. If no days rolled over, then you have hit a Sunday on the first of the month and you should increment some kind of counter.
 
 Although I do have one nested loop going on, I forgave myself because it was a natural way of looking at each month over a century, given that months are looping from year to year.
 
@@ -57,7 +55,7 @@ The next step was to figure out all the variables I would need to accomplish thi
 `remainder = 6` In Jan of 1900 we know there are 6 days before the first Sunday.\
 `sundays = 0` This will store a sum of first Sundays as we hit them.
 
-Then, I wrote out the code based on the idea I had had originally. 
+Then, I wrote out the code based on the idea I originally had.
 
 And finally, I spent the last 80 percent of my time chasing down all the little bugs and problems that I had created.
 
@@ -99,7 +97,7 @@ then it's a leap year and should be 29 days, not 28!
             remainder = week - ((leap - remainder) % week)
 ```
 
-Otherwise it's just a boring, normal month.
+Otherwise, it's just a normal month.
         
 ```python
         else:
@@ -122,10 +120,10 @@ print(sundays)
 
 I chose to submit a previously created project that I completed purely for fun. I bought a program called Affinity Designer for work, it’s a robust alternative to Adobe Illustrator. I bought it because I was doing work on our website and needed it, but I have since found that using it is a lot of fun.
 
-My graphic design skills are a bit simplistic and it is not my normal creative outlet, but I often find myself engrossed in projects like this after work.
+My graphic design skills are a bit simple and it is not my normal creative outlet, but I often find myself engrossed in projects like this after work.
 
-One evening I was taking out the trash, and decided to exit my apartment building from the alley. To my horror, the alley had been overrun by a sea of rats. The whole alley seemed to be moving and shifting as the rats scurried under piles of garbage to hide from me. 
+One evening I was taking out the trash and decided to exit my apartment building from the alley. To my horror, the alley had been overrun by a sea of rats. The whole alley seemed to be moving and shifting as the rats scurried under piles of garbage to hide from me. 
 
-The rats had completely disgusted me, so naturally I had to create some kind of tribute to them. It was only supposed to be a quick little representation of the very silly parody of the preamble of the US Constitution, but I found myself glued to this poster project for quite a long time. I could not help but decorate it with the cheesy and over-the-top stars and stripes iconography that is commonly found on campaign signs.
+The rats completely disgusted me, so naturally I had to create some kind of tribute to them. It was only supposed to be a quick little representation of the very silly parody of the preamble of the US Constitution, but I found myself glued to this poster project for quite a long time. I decorated it with the cheesy and over-the-top stars and stripes iconography that is commonly found on campaign signs.
 
-I don’t want to admit how much time I spent on this, but it was certainly more than two hours (drawing even simplistic blue rats is a challenge for me!) I have uploaded both a PNG and the original Affinity Designer file.
+I don’t want to admit how much time I spent on this, but it was more than two hours (drawing even simplistic blue rats is a challenge for me!) I have uploaded both a PNG and the original Affinity Designer file.
